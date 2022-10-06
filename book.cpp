@@ -27,21 +27,17 @@ set<string> Book::keywords() const{
 
 string Book::displayString() const{
 	string output = "";
-	output += "Name of Book: ";
 	output += name_;
 	output += "\n";
-	output += "Name of Author: ";
+	output += "Author: ";
 	output += author_;
-	output += "\n";
-	output += "ISBN: "; 
+	output += " ISBN: "; 
 	output += isbn_;
 	output += "\n";
-	output += "Price: ";
 	output += price_;
-	output += "\n";
-	output += "Quantity: ";
+	output += " ";
 	output += qty_;
-	output += "\n";
+	output += " left.";
 	return output;
 }
 

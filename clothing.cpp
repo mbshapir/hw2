@@ -26,21 +26,17 @@ set<string> Clothing::keywords() const{
 
 string Clothing::displayString() const{
 	string output = "";
-	output += "Name of Clothing: ";
 	output += name_;
 	output += "\n";
-	output += "Name of Brand: ";
+	output += "Size: ";
+	output += size_;
+	output += " Brand: "; 
 	output += brand_;
 	output += "\n";
-	output += "Size: "; 
-	output += size_;
-	output += "\n";
-	output += "Price: ";
 	output += price_;
-	output += "\n";
-	output += "Quantity: ";
+	output += " ";
 	output += qty_;
-	output += "\n";
+	output += " left.";
 	return output;
 	/*string output = "";
 	output = output + "Name of Clothing: " + name_ + "\n" + "Name of Brand: " + brand_ + "\n" + "Size: " + size_ + "\n" + "Price: " + price_ + "\n" + "Quantity: " + qty_ + "\n";

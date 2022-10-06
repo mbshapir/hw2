@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
      *  DataStore type to your derived type
      ****************/
     DataStore ds;
-
+		//MyDataStore ds;
 
 
     // Instantiate the individual section and product parsers we want
@@ -100,11 +100,19 @@ int main(int argc, char* argv[])
                 done = true;
             }
 	    /* Add support for other commands here */
-
-
-
-
-            else {
+						else if(cmd == "ADD"){
+							int outcome;
+							if(ss >> outcome){ //if outcome can be filled from string stream
+								ds.addCart(outcome);
+							}
+						}
+						else if(cmd == "VIEWCART"){
+							ds.viewCart();
+            }
+						else if(cmd == "BUYCART"){
+							ds.checkoutCart();		
+						}
+						else {
                 cout << "Unknown command" << endl;
             }
         }

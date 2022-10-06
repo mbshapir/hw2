@@ -26,21 +26,17 @@ set<string> Movie::keywords() const{
 
 string Movie::displayString() const{
 	string output = "";
-	output += "Name of Movie: ";
 	output += name_;
 	output += "\n";
-	output += "Name of Genre: ";
+	output += "Genre: ";
 	output += genre_;
-	output += "\n";
-	output += "rating: "; 
+	output += " Rating: "; 
 	output += rating_;
 	output += "\n";
-	output += "Price: ";
 	output += price_;
-	output += "\n";
-	output += "Quantity: ";
+	output += " ";
 	output += qty_;
-	output += "\n";
+	output += " left.";
 	return output;
 	/*string output = "";
 	output = output + "Name of Movie: " + name_ + "\n" + "Name of Genre: " + genre_ + "\n" + "Rating: " + rating_ + "\n" + "Price: " + price_ + "\n" + "Quantity: " + qty_ + "\n";
