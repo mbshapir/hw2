@@ -1,0 +1,5 @@
+.clang-tidy
+.clang-format
+book.o
+movie.o
+clothing.o
