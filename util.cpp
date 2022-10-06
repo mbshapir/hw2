@@ -16,14 +16,26 @@ std::string convToLower(std::string src)
 std::set<std::string> parseStringToWords(string rawWords)
 {
 
+    set<string> wordBank;
+    int iterator = 0;
+    string toBeAdded = ""; 
+    while(iterator != rawWords.size()){        
+        while((rawWords[iterator] >= 65 && rawWords[iterator] <= 90) || (rawWords[iterator] >= 97 && rawWords[iterator] <= 122)){ //compare to ascii values of characters to ensure valid characters
+            if((rawWords[iterator] >= 65 && rawWords[iterator] <= 90)){
+                toBeAdded += (rawWords[iterator] + 32); //convert uppercase to lowercase
+            }else{
+                toBeAdded += rawWords[iterator];
+            }
+            iterator++;
+        }
+        if(toBeAdded.size() >= 2){
+            wordBank.insert(toBeAdded);
+        }
+        iterator++;
+        toBeAdded.erase();
+    }
 
-
-
-
-
-
-
-
+    return wordBank;
 
 }
 
